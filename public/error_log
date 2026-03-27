@@ -1,0 +1,229 @@
+[03-Feb-2026 14:45:51 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/dashboard.php on line 45
+[03-Feb-2026 14:48:33 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 14:48:39 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:11:45 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:13:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'precio' doesn't have a default value in /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php:167
+Stack trace:
+#0 /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php(167): PDOStatement->execute(Array)
+#1 /home2/superar1/public_html/landing_educacioncontinua/app/controllers/AdminController.php(300): CursoModel->insertarCurso(Array)
+#2 /home2/superar1/public_html/landing_educacioncontinua/public/index.php(32): AdminController->guardar_curso(NULL)
+#3 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php on line 167
+[03-Feb-2026 15:16:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'precio' doesn't have a default value in /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php:167
+Stack trace:
+#0 /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php(167): PDOStatement->execute(Array)
+#1 /home2/superar1/public_html/landing_educacioncontinua/app/controllers/AdminController.php(300): CursoModel->insertarCurso(Array)
+#2 /home2/superar1/public_html/landing_educacioncontinua/public/index.php(32): AdminController->guardar_curso(NULL)
+#3 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/app/models/CursoModel.php on line 167
+[03-Feb-2026 15:23:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/superar1/public_html/landing_educacioncontinua/app/models/InscripcionModel.php:1) in /home2/superar1/public_html/landing_educacioncontinua/app/controllers/AdminController.php on line 319
+[03-Feb-2026 15:26:01 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:26:09 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:27:04 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:27:14 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 15:27:34 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:27:34 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 108
+[03-Feb-2026 15:28:47 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 105
+[03-Feb-2026 15:31:49 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:31:49 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 108
+[03-Feb-2026 15:32:04 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:32:04 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 108
+[03-Feb-2026 15:33:04 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:33:04 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 108
+[03-Feb-2026 15:33:08 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:33:16 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:34:20 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[03-Feb-2026 15:37:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect decimal value: '' for column 'monto_pagado' at row 1 in /home2/superar1/public_html/landing_educacioncontinua/app/models/InscripcionModel.php:74
+Stack trace:
+#0 /home2/superar1/public_html/landing_educacioncontinua/app/models/InscripcionModel.php(74): PDOStatement->execute(Array)
+#1 /home2/superar1/public_html/landing_educacioncontinua/app/controllers/InscripcionController.php(81): InscripcionModel->registrarPago(Array)
+#2 /home2/superar1/public_html/landing_educacioncontinua/app/controllers/InscripcionController.php(45): InscripcionController->pagarTransferencia()
+#3 /home2/superar1/public_html/landing_educacioncontinua/public/index.php(32): InscripcionController->procesar(NULL)
+#4 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/app/models/InscripcionModel.php on line 74
+[03-Feb-2026 15:48:02 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 16:30:29 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:30:29 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:30:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:31:04 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:31:04 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:31:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 5
+[03-Feb-2026 16:42:38 UTC] PHP Warning:  require(/home2/superar1/public_html/landing_educacioncontinua/public/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 15
+[03-Feb-2026 16:42:38 UTC] PHP Warning:  require(/home2/superar1/public_html/landing_educacioncontinua/public/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 15
+[03-Feb-2026 16:42:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/superar1/public_html/landing_educacioncontinua/public/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/superar1/public_html/landing_educacioncontinua/public/enviar-correo.php on line 15
+[03-Feb-2026 16:51:00 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 16:55:13 UTC] PHP Warning:  include(../app/views/layouts/footer.php?v=2): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 164
+[03-Feb-2026 16:55:13 UTC] PHP Warning:  include(../app/views/layouts/footer.php?v=2): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 164
+[03-Feb-2026 16:55:13 UTC] PHP Warning:  include(): Failed opening '../app/views/layouts/footer.php?v=2' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 164
+[03-Feb-2026 16:56:40 UTC] PHP Warning:  include_once(/home2/superar1/public_html/landing_educacioncontinua/public): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:40 UTC] PHP Warning:  include_once(): Failed opening '' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:45 UTC] PHP Warning:  include_once(/home2/superar1/public_html/landing_educacioncontinua/public): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:45 UTC] PHP Warning:  include_once(): Failed opening '' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:46 UTC] PHP Warning:  include_once(/home2/superar1/public_html/landing_educacioncontinua/public): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:46 UTC] PHP Warning:  include_once(): Failed opening '' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:51 UTC] PHP Warning:  include_once(/home2/superar1/public_html/landing_educacioncontinua/public): Failed to open stream: No such file or directory in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 16:56:51 UTC] PHP Warning:  include_once(): Failed opening '' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 165
+[03-Feb-2026 19:31:06 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:34:55 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:38:59 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:49:24 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:50:22 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:52:28 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:52:50 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:53:18 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:56:49 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 19:57:48 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:08:45 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:09:54 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:10:53 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:11:37 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:32:22 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:34:31 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:47:46 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:48:07 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:48:56 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:52:30 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 20:53:17 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:00:16 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:14:21 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:22:26 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:24:13 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:29:35 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:33:44 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:46:37 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[03-Feb-2026 21:51:11 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 13:46:59 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 13:54:16 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 13:54:57 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 13:55:56 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 13:56:27 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:15:32 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:16:13 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:22:21 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:23:11 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:28:07 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:28:45 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:33:04 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:33:37 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:34:27 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:34:55 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:35:18 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:36:39 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:37:49 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:42:38 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:43:21 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:47:13 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:47:37 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 14:48:12 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 15:21:45 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 15:22:35 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:07:08 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:25:07 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:26:50 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:27:51 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:31:26 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:31:31 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 16:31:53 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 58
+[04-Feb-2026 16:31:53 UTC] PHP Warning:  Undefined property: stdClass::$precio in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/detalle.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 91
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 94
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $precio_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 97
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_intensivo in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 102
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_presencial in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 105
+[04-Feb-2026 18:25:05 UTC] PHP Warning:  Undefined variable $cupos_hibrida in /home2/superar1/public_html/landing_educacioncontinua/app/views/home/index.php on line 108
+[04-Feb-2026 19:03:29 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:03:54 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:05:36 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:05:55 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:13:29 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:47:00 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:48:23 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:49:20 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12
+[04-Feb-2026 19:49:49 UTC] PHP Warning:  Undefined variable $modalidades in /home2/superar1/public_html/landing_educacioncontinua/app/views/admin/cursos.php on line 12

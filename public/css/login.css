@@ -1,0 +1,105 @@
+/* Contenedor principal para centrar las tarjetas */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 15px;
+    background-color: #f4f4f4;
+    /* Fondo suave para resaltar la tarjeta */
+}
+
+/* Tarjeta base blanca */
+.card-login,
+.card-acceso {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+.card-acceso {
+    max-width: 800px;
+}
+
+/* Más ancha para las dos opciones */
+
+/* Títulos y textos */
+h2 {
+    color: var(--dark-gray);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.text-muted {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Formuarios */
+.form-group label {
+    font-weight: bold;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: none;
+    outline: none;
+}
+
+/* Botones con tus colores globales */
+.btn-login-main {
+    background-color: var(--accent-color);
+    color: var(--dark-gray);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-login-main:hover {
+    background-color: var(--dark-gray);
+    color: var(--accent-color);
+}
+
+/* Estilos específicos para la vista de Acceso (Opciones) */
+.opcion-card {
+    transition: 0.3s;
+    border: 2px solid #eee !important;
+}
+
+.opcion-card:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-5px);
+}
+
+.opcion-card.highlight {
+    background: #fffcf0;
+    /* Un toque amarillento muy suave */
+    border-color: var(--accent-color) !important;
+}
+
+.icon-box {
+    background: var(--accent-color);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+}

@@ -1,0 +1,825 @@
+.status-pill.status-modalidad {
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe082 60%, #ffd740 100%);
+    color: #3d2c00;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(255, 215, 64, 0.13);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.1em 0;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    border: 1.5px solid #ffe082;
+}
+/* Estilos del Header Estudiante */
+.navbar-estudiante {
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 0.8rem 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #FFD700;
+    border-radius: 0 0 18px 18px;
+}
+
+.brand-text {
+    font-weight: 700;
+    color: #444;
+    margin-left: 12px;
+    font-size: 1.18rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-estudiante .nav-link {
+    color: #444;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem !important;
+    transition: 0.3s;
+    font-size: 1.05rem;
+}
+
+.navbar-estudiante .nav-link:hover {
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.07);
+    border-radius: 8px;
+}
+
+.navbar-estudiante .nav-link.active {
+    color: #FFD700 !important;
+    border-bottom: 2px solid #FFD700;
+    background: rgba(255, 215, 0, 0.12);
+    border-radius: 8px;
+}
+
+/* Avatar del usuario en el círculo */
+.user-avatar-mini {
+    width: 38px;
+    height: 38px;
+    background-color: #222;
+    color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #FFD700;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+    margin-right: 8px;
+}
+
+.user-profile-link {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 50px;
+    padding: 5px 15px !important;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.logo-header {
+    height: 40px;
+}
+
+/* Ajuste del cuerpo */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================================
+   DASHBOARD PRINCIPAL
+   ================================ */
+
+.dashboard-wrapper {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.main-content {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header del contenido con diseño mejorado */
+.content-header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.content-header h1 {
+    color: #FFD700;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content-header p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-mini {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.stat-item strong {
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-item span {
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+}
+
+/* ================================
+   TABLA DE INSCRIPCIONES - DISEÑO PREMIUM
+   ================================ */
+
+.card-container {
+    padding: 0;
+}
+
+.table-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.modern-table thead {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.modern-table thead th {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+    border: none;
+}
+
+.modern-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.modern-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.modern-table tbody tr:hover {
+    background: linear-gradient(90deg, #fffef7 0%, #fff9e6 100%);
+    transform: scale(1.01);
+    box-shadow: 0 3px 10px rgba(255, 204, 0, 0.1);
+}
+
+.modern-table tbody td {
+    padding: 1.5rem 1.5rem;
+    vertical-align: middle;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Celda de información del curso */
+.course-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.course-title {
+    font-weight: 700;
+    color: #2d2d2d;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+/* Pills de estado mejorados */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.status-pill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estados de pago */
+.status-pendiente {
+    background: linear-gradient(135deg, #ffc107 0%, #ffca28 100%);
+    color: #000;
+    box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3);
+}
+
+.status-pagado {
+    background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+}
+
+.status-rechazado {
+    background: linear-gradient(135deg, #dc3545 0%, #e85563 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Estados académicos */
+.academic-pendiente {
+    background: linear-gradient(135deg, #6c757d 0%, #838a92 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(108, 117, 125, 0.3);
+}
+
+.academic-cursando {
+    background: linear-gradient(135deg, #17a2b8 0%, #1fc8de 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(23, 162, 184, 0.3);
+}
+
+.academic-aprobado {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
+    font-weight: 700;
+}
+
+.academic-reprobado {
+    background: linear-gradient(135deg, #dc3545 0%, #e85563 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Calificación */
+.grade-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #FFD700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Botón de descarga de certificado */
+.btn-action-download {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn-action-download:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    color: #000;
+    text-decoration: none;
+}
+
+/* Estado vacío mejorado */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state img {
+    max-width: 300px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    color: #000;
+    text-decoration: none;
+}
+
+/* Responsive para la tabla */
+@media (max-width: 992px) {
+    .modern-table {
+        font-size: 0.9rem;
+    }
+    
+    .modern-table thead th,
+    .modern-table tbody td {
+        padding: 1rem;
+    }
+    
+    .course-title {
+        font-size: 0.95rem;
+    }
+    
+    .status-pill {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-header h1 {
+        font-size: 2rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .content-header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .table-card {
+        overflow-x: auto;
+    }
+    
+    .modern-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .content-header p {
+        font-size: 1rem;
+    }
+    
+    .stats-mini {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+}
+
+.catalogo-container {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0 3rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* Header del catálogo */
+.catalogo-header {
+    margin-bottom: 2rem;
+}
+
+.catalogo-title {
+    color: #2d2d2d;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.catalogo-title i {
+    color: #ffcc00;
+    font-size: 1.8rem;
+}
+
+.catalogo-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.cursos-stats {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.stat-badge {
+    background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
+    color: #2d2d2d;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 3px 10px rgba(255, 204, 0, 0.3);
+}
+
+.stat-badge i {
+    font-size: 1rem;
+}
+
+/* Grid de cursos */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+}
+
+/* Tarjeta de curso mejorada */
+.course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen del curso */
+.course-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d2d2d 0%, #454545 100%);
+}
+
+.course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.course-card:hover .course-image {
+    transform: scale(1.08);
+}
+
+/* Badge de estado */
+.course-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+.course-badge span {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge-disponible {
+    background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
+    color: white;
+}
+
+.badge-ultimos {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb142 100%);
+    color: white;
+}
+
+.badge-lleno {
+    background: linear-gradient(135deg, #dc3545 0%, #e85563 100%);
+    color: white;
+}
+
+/* Contenido del curso */
+.course-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-title {
+    color: #2d2d2d;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8em;
+}
+
+/* Información del curso */
+.course-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.info-item i {
+    color: #ffcc00;
+    font-size: 0.9rem;
+}
+
+/* Footer del curso */
+.course-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    margin-top: auto;
+    gap: 0.5rem;
+}
+
+.course-price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+/* Botón de inscripción */
+.btn-inscribir {
+    background: linear-gradient(135deg, #ffcc00 0%, #ffd633 100%);
+    color: #2d2d2d;
+    padding: 0.65rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 3px 10px rgba(255, 204, 0, 0.3);
+    white-space: nowrap;
+}
+
+.btn-inscribir:hover {
+    background: linear-gradient(135deg, #ffd633 0%, #ffe066 100%);
+    transform: translateX(3px);
+    color: #2d2d2d;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+
+.btn-inscribir i {
+    transition: transform 0.3s ease;
+}
+
+.btn-inscribir:hover i {
+    transform: translateX(3px);
+}
+
+/* Estado sin cursos */
+.no-courses {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.no-courses i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.no-courses h3 {
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.no-courses p {
+    color: #999;
+    font-size: 1rem;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 992px) {
+    .catalogo-title {
+        font-size: 1.6rem;
+    }
+    
+    .courses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    .cursos-stats {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogo-container {
+        padding: 1.5rem 0 2rem;
+    }
+    
+    .catalogo-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .catalogo-title {
+        font-size: 1.4rem;
+    }
+    
+    .catalogo-title i {
+        font-size: 1.4rem;
+    }
+    
+    .catalogo-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .course-image-wrapper {
+        height: 200px;
+    }
+    
+    .stat-badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .catalogo-title {
+        font-size: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .course-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .course-price {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .btn-inscribir {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .price-value {
+        font-size: 1.3rem;
+    }
+}
