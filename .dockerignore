@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+BDD
+database
+public/error_log
+public/vendor.zip
+Dockerfile
+docker-compose.yml
