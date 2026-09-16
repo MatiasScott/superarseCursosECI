@@ -9,7 +9,7 @@ require_once '../app/config/config.php';
 require_once '../app/config/Database.php';
 
 // URL base del proyecto - Educación Continua
-define('URL_BASE', 'https://eci.superarse.ec/');
+define('URL_BASE', 'https://eci.superarse.edu.ec/');
 
 // Obtener la URL amigable
 $url = $_GET['url'] ?? 'curso/index';
