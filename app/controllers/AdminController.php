@@ -54,6 +54,7 @@ class AdminController {
         }
     private $modeloInscripcion;
     private $modeloCurso;
+    private $modeloUsuario;
 
     public function __construct()
     {
@@ -64,8 +65,219 @@ class AdminController {
         }
         require_once '../app/models/CursoModel.php';
         require_once '../app/models/InscripcionModel.php';
+        require_once '../app/models/UsuarioModel.php';
         $this->modeloCurso = new CursoModel();
         $this->modeloInscripcion = new InscripcionModel();
+        $this->modeloUsuario = new UsuarioModel();
+    }
+
+    // ================= GESTIÓN DE USUARIOS =================
+
+    // Listado con filtros por rol y búsqueda
+    public function usuarios()
+    {
+        $filtro_rol = isset($_GET['rol']) ? $_GET['rol'] : '';
+        $busqueda = isset($_GET['q']) ? trim($_GET['q']) : '';
+
+        $usuarios = $this->modeloUsuario->listarUsuarios($filtro_rol, $busqueda);
+        $total_admins = $this->modeloUsuario->contarAdmins();
+
+        $css_especifico = 'admin';
+        require_once '../app/views/admin/usuarios.php';
+    }
+
+    // Formulario de alta
+    public function crear_usuario()
+    {
+        $css_especifico = 'admin';
+        require_once '../app/views/admin/crear_usuario.php';
+    }
+
+    // Procesa el alta
+    public function guardar_usuario()
+    {
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            header("Location: " . URL_BASE . "admin/usuarios");
+            exit;
+        }
+
+        $datos = [
+            'cedula_ruc' => trim($_POST['cedula_ruc'] ?? ''),
+            'nombre'     => trim($_POST['nombre'] ?? ''),
+            'apellido'   => trim($_POST['apellido'] ?? ''),
+            'email'      => trim($_POST['email'] ?? ''),
+            'password'   => $_POST['password'] ?? '',
+            'telefono'   => trim($_POST['telefono'] ?? ''),
+            'rol'        => ($_POST['rol'] ?? '') === 'admin' ? 'admin' : 'estudiante'
+        ];
+
+        $error = $this->validarUsuario($datos, null);
+        if ($error !== null) {
+            header("Location: " . URL_BASE . "admin/crear_usuario?" . $this->parametrosUsuario($datos, $error));
+            exit;
+        }
+
+        if ($this->modeloUsuario->crear($datos)) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=creado");
+        } else {
+            header("Location: " . URL_BASE . "admin/crear_usuario?error=" . urlencode("No se pudo crear el usuario."));
+        }
+        exit;
+    }
+
+    // Formulario de edición
+    public function editar_usuario($id)
+    {
+        $usuario = $this->modeloUsuario->obtenerPorId($id);
+
+        if (!$usuario) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=no_encontrado");
+            exit;
+        }
+
+        $total_inscripciones = $this->modeloUsuario->contarInscripciones($id);
+
+        $css_especifico = 'admin';
+        require_once '../app/views/admin/editar_usuario.php';
+    }
+
+    // Procesa la edición
+    public function guardar_edicion_usuario()
+    {
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            header("Location: " . URL_BASE . "admin/usuarios");
+            exit;
+        }
+
+        $id = intval($_POST['id_usuario'] ?? 0);
+        $usuarioActual = $this->modeloUsuario->obtenerPorId($id);
+
+        if (!$usuarioActual) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=no_encontrado");
+            exit;
+        }
+
+        $datos = [
+            'id_usuario' => $id,
+            'cedula_ruc' => trim($_POST['cedula_ruc'] ?? ''),
+            'nombre'     => trim($_POST['nombre'] ?? ''),
+            'apellido'   => trim($_POST['apellido'] ?? ''),
+            'email'      => trim($_POST['email'] ?? ''),
+            'password'   => $_POST['password'] ?? '',
+            'telefono'   => trim($_POST['telefono'] ?? ''),
+            'rol'        => ($_POST['rol'] ?? '') === 'admin' ? 'admin' : 'estudiante'
+        ];
+
+        $error = $this->validarUsuario($datos, $id);
+        if ($error !== null) {
+            header("Location: " . URL_BASE . "admin/editar_usuario/" . $id . "?" . $this->parametrosUsuario($datos, $error));
+            exit;
+        }
+
+        // No dejar el sistema sin administradores
+        if ($usuarioActual->rol === 'admin' && $datos['rol'] !== 'admin' && $this->modeloUsuario->contarAdmins($id) === 0) {
+            header("Location: " . URL_BASE . "admin/editar_usuario/" . $id . "?error=" . urlencode("Debe existir al menos un administrador en el sistema."));
+            exit;
+        }
+
+        if ($this->modeloUsuario->actualizar($datos)) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=actualizado");
+        } else {
+            header("Location: " . URL_BASE . "admin/editar_usuario/" . $id . "?error=" . urlencode("No se pudo actualizar el usuario."));
+        }
+        exit;
+    }
+
+    // Elimina un usuario
+    public function eliminar_usuario()
+    {
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            header("Location: " . URL_BASE . "admin/usuarios");
+            exit;
+        }
+
+        $id = intval($_POST['id_usuario'] ?? 0);
+        $usuario = $this->modeloUsuario->obtenerPorId($id);
+
+        if (!$usuario) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=no_encontrado");
+            exit;
+        }
+
+        // No permitir borrarse a uno mismo
+        if (isset($_SESSION['user_id']) && intval($_SESSION['user_id']) === $id) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=error_propio");
+            exit;
+        }
+
+        // No dejar el sistema sin administradores
+        if ($usuario->rol === 'admin' && $this->modeloUsuario->contarAdmins($id) === 0) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=error_ultimo_admin");
+            exit;
+        }
+
+        if ($this->modeloUsuario->eliminar($id)) {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=eliminado");
+        } else {
+            header("Location: " . URL_BASE . "admin/usuarios?msj=error_eliminar");
+        }
+        exit;
+    }
+
+    // Valida los campos del usuario. Devuelve el mensaje de error o null si está bien.
+    private function validarUsuario($datos, $id_usuario = null)
+    {
+        if ($datos['cedula_ruc'] === '') {
+            return "La cédula/RUC es obligatoria.";
+        }
+        if (!preg_match('/^[0-9]{10,13}$/', $datos['cedula_ruc'])) {
+            return "La cédula/RUC debe tener entre 10 y 13 dígitos.";
+        }
+        if ($datos['nombre'] === '' || $datos['apellido'] === '') {
+            return "El nombre y el apellido son obligatorios.";
+        }
+        if (!filter_var($datos['email'], FILTER_VALIDATE_EMAIL)) {
+            return "El correo electrónico no es válido.";
+        }
+        if (empty($datos['password']) && $id_usuario === null) {
+            return "La contraseña es obligatoria.";
+        }
+        if (!empty($datos['password']) && strlen($datos['password']) < 6) {
+            return "La contraseña debe tener al menos 6 caracteres.";
+        }
+        if (!empty($datos['telefono']) && !preg_match('/^[0-9]{7,20}$/', $datos['telefono'])) {
+            return "El teléfono debe contener solo dígitos (7 a 20).";
+        }
+
+        if ($id_usuario === null) {
+            if ($this->modeloUsuario->existeEmail($datos['email'])) {
+                return "El correo electrónico ya está registrado.";
+            }
+            if ($this->modeloUsuario->existeCedula($datos['cedula_ruc'])) {
+                return "La cédula/RUC ya está registrada.";
+            }
+        } else {
+            if ($this->modeloUsuario->existeEmailExcepto($datos['email'], $id_usuario)) {
+                return "El correo electrónico ya pertenece a otro usuario.";
+            }
+            if ($this->modeloUsuario->existeCedulaExcepto($datos['cedula_ruc'], $id_usuario)) {
+                return "La cédula/RUC ya pertenece a otro usuario.";
+            }
+        }
+
+        return null;
+    }
+
+    // Arma los parámetros de la URL para reenviar los datos del formulario al redirigir
+    private function parametrosUsuario($datos, $error)
+    {
+        $params = ['error' => $error];
+        foreach (['cedula_ruc', 'nombre', 'apellido', 'email', 'telefono', 'rol'] as $campo) {
+            if (isset($datos[$campo])) {
+                $params[$campo] = $datos[$campo];
+            }
+        }
+        return http_build_query($params);
     }
 
     public function dashboard()

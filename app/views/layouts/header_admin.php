@@ -46,6 +46,11 @@
                             <i class="fas fa-users"></i> Estudiantes
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-admin" href="<?= URL_BASE ?>admin/usuarios">
+                            <i class="fas fa-user-cog"></i> Usuarios
+                        </a>
+                    </li>
                 </ul>
 
                 <div class="d-flex align-items-center">

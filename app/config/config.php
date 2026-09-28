@@ -9,3 +9,5 @@ define('DB_PASS', getenv('DB_PASS') ?: '');
 // PayPhone
 define('PAYPHONE_TOKEN', getenv('PAYPHONE_TOKEN') ?: '');
 define('PAYPHONE_STORE_ID', getenv('PAYPHONE_STORE_ID') ?: '');
+
+

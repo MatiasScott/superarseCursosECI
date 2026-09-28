@@ -9,9 +9,17 @@ class Database
     private function __construct()
     {
         try {
+            // El host puede venir como "host" o como "host:puerto" (BDD local en Docker, por ejemplo)
+            $host = DB_HOST;
+            $puerto = defined('DB_PORT') ? DB_PORT : 3306;
+            if (strpos($host, ':') !== false) {
+                list($host, $puerto_host) = explode(':', $host, 2);
+                $puerto = $puerto_host ?: $puerto;
+            }
+
             // Configuramos la conexión con soporte para caracteres UTF-8 (acentos y eñes)
             $this->conexion = new PDO(
-                "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+                "mysql:host=" . $host . ";port=" . $puerto . ";dbname=" . DB_NAME . ";charset=utf8",
                 DB_USER,
                 DB_PASS
             );

@@ -57,11 +57,11 @@
             <!-- ENLACES -->
             <div class="col-lg-3 col-md-6 mb-4">
                 <h3 class="text-primary mb-3 font-weight-bold footer-title">Enlaces rápidos</h3>
-                <a class="text-white-50 d-block mb-2" href="https://agrovet.superarse.ec/">Agrovet</a>
+                <a class="text-white-50 d-block mb-2" href="https://agrovet.superarse.edu.ec/">Agrovet</a>
                 <a class="text-white-50 d-block mb-2" href="https://superarse.edu.ec/">Instituto Superarse</a>
-                <a class="text-white-50 d-block mb-2" href="https://superarse.ec/">Superarse Conectados</a>
+                <a class="text-white-50 d-block mb-2" href="https://conectados.superarse.edu.ec/">Superarse Conectados</a>
                 <a class="text-white-50 d-block mb-2" href="https://becasuperarse.ec/">Because he is Nice</a>
-                <a class="text-white-50 d-block mb-2" href="https://2ctm2025.superarse.ec/">II CTM 2025</a>
+                <a class="text-white-50 d-block mb-2" href="https://2ctm.superarse.edu.ec/">II CTM 2025</a>
             </div>
 
             <!-- FORMULARIO -->

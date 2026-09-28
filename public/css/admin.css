@@ -469,8 +469,29 @@ textarea.form-control-admin {
 }
 
 .btn-action-edit:hover {
-    background-color: #444;
+    background: #444;
     color: var(--accent-color);
+    text-decoration: none;
+}
+
+.btn-action-delete {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-action-delete:hover {
+    background: #ffcdd2;
+    color: #b71c1c;
     text-decoration: none;
 }
 
